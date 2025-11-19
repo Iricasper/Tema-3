@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 24% 24% 12% 12% 24%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 1%;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas: 
+  "cab cab cab cab cab"
+  "lat uno dos dos tres"
+  "lat cuatro cuatro cinco cinco"
+  "pie pie pie pie pie";
+}
+
+.cab {
+  background-color: palegoldenrod;
+  grid-area: cab
+}
+
+.lat {
+  background-color: palegreen;
+  grid-area: lat
+}
+
+.pie {
+  background-color: paleturquoise;
+  grid-area: pie
+}
+
+.uno {
+  background-color: palevioletred;
+  grid-area: uno
+}
+
+.dos {
+  background-color: teal;
+  grid-area: dos
+}
+
+.tres {
+  background-color: salmon;
+  grid-area: tres
+}
+
+.cuatro {
+  background-color: cornflowerblue;
+  grid-area: cuatro
+}
+
+.cinco {
+  background-color: hotpink;
+  grid-area: cinco
+}

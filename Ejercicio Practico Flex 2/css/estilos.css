@@ -1,0 +1,87 @@
+body {
+  box-sizing: border-box;
+  background-color: oldlace;
+} 
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  /* padding: 0 0 1em; */
+  height: 2em;
+  border-bottom: 1px outset gray;
+  background-color: white;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: 0 auto;
+  list-style-type: none;
+  text-transform: uppercase;
+  /* font-variant: small-caps; */
+}
+
+.nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 2.5em;
+  background-color: white;
+}
+
+.logo img {
+  width: 33%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-color: oldlace;
+}
+
+.contenedor-lateral {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 25%;
+}
+
+.contenedor-lateral > div {
+  margin-bottom: 1em;
+  background-color: white;
+}
+
+.idiomas ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.idiomas ul li {
+  padding: 6px;
+}
+
+.contenedor-principal {
+  width: 70%;
+  background-color: white;
+}
+
+.fila-footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: gray;
+}
+
+.fila-footer a {
+  color: gray;
+}
