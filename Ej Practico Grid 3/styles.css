@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 2fr) repeat(2, 1fr) 2fr;
+  grid-template-columns: repeat(5, 1fr) 1.5fr;
+  gap: 1%;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas: 
+  "cab cab cab cab cab cab"
+  ". . uno uno . ."
+  "lat dos tres tres tres cuatro"
+  "lat cinco seis siete ocho cuatro"
+  "lat cinco seis siete ocho nueve"
+  "lat cinco pie pie pie pie"
+  ;
+}
+
+.cab {
+  grid-area: cab;
+  background-color: cadetblue;
+  grid-area: 1 / 1 / 2 / 7;
+}
+
+.lat {
+  grid-area: lat;
+  background-color: blue;
+  grid-area: 3 / 1 / 7 / 2;
+}
+
+.pie {
+  grid-area: pie;
+  background-color: pink;
+  grid-area: 6 / 3 / 7 / 7;
+}
+
+.uno {
+  grid-area: uno;
+  background-color: red;
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+.dos {
+  grid-area: dos;
+  background-color: palevioletred;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.tres {
+  grid-area: tres;
+  background-color: orange;
+  grid-area: 3 / 3 / 4 / 6
+}
+
+.cuatro {
+  grid-area: cuatro;
+  background-color: brown;
+  grid-area: 3 / 6 / 5 / 7
+}
+
+.cinco {
+  grid-area: cinco;
+  background-color: green;;
+  grid-area: 4 / 2 / 7 / 3
+}
+
+.seis {
+  grid-area: seis;
+  background-color: darkred;
+  grid-area: 4 / 3 / 5 / 4
+}
+
+.siete {
+  grid-area: siete;
+  background-color: yellow;
+  grid-area: 4 / 4 / 5 / 5
+}
+
+.ocho {
+  grid-area: ocho;
+  background-color: darkgray;
+  grid-area: 4 / 5 / 5 / 6
+}
+
+.nueve {
+  grid-area: nueve;
+  background-color: magenta;
+  grid-area: 5/ 6 / 6 / 7
+}
