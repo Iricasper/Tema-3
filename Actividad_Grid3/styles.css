@@ -2,13 +2,23 @@
   box-sizing: border-box;
 }
 
-img {
-  height: 10vh
-}
-
 body {
   margin: 1em auto;
   width: 90%;
+  font-family: Lobster;
+  color: #666666;
+}
+
+img {
+  width: 70%;
+  height: 70%;
+  border-radius: 1em;
+  margin-top: 1em
+}
+
+#uno img, #dos img, #tres img, #cuatro img {
+  width: 90%;
+  height: 50%;
 }
 
 .container {
@@ -16,7 +26,7 @@ body {
   width: 100%;
   height: 100vh;
   gap: 1%;
-  grid-template-rows: 1fr 4fr 3fr 2fr;
+  grid-template-rows: 1fr 4fr 3fr 1fr;
   grid-template-columns: 1fr 0.1fr 1.9fr 1.9fr 0.1fr 2fr;
   grid-template-areas: 
   "header header header header header header"
@@ -89,4 +99,31 @@ main, article {
 
 main, #uno, #dos, #tres, #cuatro {
   text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header h4 {
+  margin-top: 0.2em
+}
+
+nav div{
+  padding-top: 1em;
+  padding-left: 1em
+}
+
+footer {
+  padding-top: 4em;
+  align-items: center;
+}
+
+address p {
+  margin: 0;
+}
+
+.social img {
+  height: 3em;
+  width: auto;
 }
