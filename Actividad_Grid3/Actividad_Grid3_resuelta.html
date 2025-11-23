@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio Práctico GRID</title>
+<style>
+  *{
+    box-sizing:border-box;
+  }
+  
+  .container{
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 0% 3fr 3fr 1% 3fr;
+    grid-template-rows: 8% 46% 26% 8%;
+    grid-gap:2%;
+    height:100vh;
+    width:90%;
+    grid-template-areas:
+    "cab cab cab cab cab cab"
+    "menu menu principal principal art1 art1"
+    ". art2 art2 art3 art3 art4"
+    "foot foot foot foot foot foot"
+  } 
+  header{
+    grid-area:cab;
+    border-bottom:1px solid black;
+    font-style:italic;
+    color:rgb(80,80,80);
+    text-align:center;
+    align-self:center;
+  }
+  header > h1{
+    margin-bottom:0;
+  }
+  header > h4{
+    margin-top:0;
+  }
+  nav{
+    grid-area:menu;
+  }
+  nav > div{
+    font-style:italic;
+    font-weight:bold;
+    color:rgb(80,80,80);
+    margin-left:25px;
+    margin-top:15px;
+  }
+  main{
+    grid-area:principal;
+    border:1px solid black;
+    padding:3%;
+    border-radius:8px;
+    text-align:center;
+    align-self:top;
+  }
+  main > img{
+    width:70%;
+    height:70%;
+    border-radius:8px;
+  }
+  main > p{
+    font-style:italic;
+    font-weight:bold;
+    color:rgb(80,80,80);
+  }
+  #uno{
+    grid-area: art1;
+    border:1px solid black;
+    border-radius:8px;
+  }
+  #dos{
+    grid-area: art2;
+    border:1px solid black;
+    border-radius:8px;
+  }
+  #tres{
+    grid-area: art3;
+    border:1px solid black;
+    border-radius:8px;
+  }
+  #cuatro{
+    grid-area: art4;
+    border:1px solid black;
+    border-radius:8px;
+  }
+  article{
+    text-align:center;
+    vertical-align:top;
+    padding:3%;
+  }
+  article > img{
+    width:100%;
+    height:70%;
+    border-radius:8px;
+  }
+  article > h2{
+    font-style:italic;
+    font-weight:bold;
+    color:rgb(80,80,80);
+  }
+  footer{
+    grid-area: foot;
+    border-top:1px solid black;
+    display:grid;
+    align-items:center;
+    /*Al dejar align-items en el contenedoir, deshabilito
+    los align-self en los elementos, dado que no hay ninguno distinto*/
+    grid-template-rows:100%;
+    grid-template-columns:25% 50% 25%;
+    grid-template-areas:
+    "contacto licencia redes"
+  }
+  footer address{
+    grid-area:contacto;
+    justify-self:left;
+    /*align-self:center;*/
+    text-align:left;
+    vertical-align:center;
+    padding:2%;
+    width:100%;
+    font-style:italic;
+    font-weight:bold;
+    color:rgb(80,80,80);
+  }
+  .copyright{
+    grid-area:licencia;
+    justify-self:center;
+    /*align-self:center;*/
+    text-align:center;
+    padding:2%;
+    width:100%;
+    font-style:italic;
+    font-weight:bold;
+    color:rgb(80,80,80);
+  }
+  .social{
+    grid-area:redes;
+    justify-self:right;
+    /*align-self:center;*/
+    text-align:right;
+    padding:2%;
+    width:100%;
+  }
+  .social img{
+    width:10%;
+  }
+</style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Ejemplo de Maquetación con Grid</h1>
+        <h4>By @pekechis para @openwebinars</h4>
+      </header>
+      <nav>
+          <div>Inicio</div>
+          <div>Galería</div>
+          <div>Productos</div>
+          <div>Clientes</div>
+          <div>Sobre nosotros</div>
+          <div>Contacto</div>
+      </nav>
+      <main>
+        <img src="./img/img1.jpg" />
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure harum
+            dolore expedita recusandae omnis obcaecati praesentium numquam,
+            labore ad libero placeat saepe nemo possimus. Eligendi, magni culpa?
+            Voluptate, eligendi eum.
+        </p>
+      </main>
+      <article id="uno">
+        <img src="./img/img2.jpg" />
+        <h2>Una image 1 bonita de un cielo</h2>
+      </article>
+      <article id="dos">
+        <img src="./img/img3.jpg" />
+        <h2>Una image 2 bonita de un cielo</h2>
+      </article>
+      <article id="tres">
+        <img src="./img/img4.jpg" />
+        <h2>Una image 3 bonita de un cielo</h2>
+      </article>
+      <article id="cuatro">
+        <img src="./img/img5.jpg" />
+        <h2>Una image 4 bonita de un cielo</h2>
+      </article>
+      <footer>
+        <address>
+          <p>C/ Principal</p>
+          <p>Sevilla</p>
+        </address>
+        <div class="copyright">
+          Todas las fotos realizadas por @pekechis bajo la Licencia CC BY-SA
+        </div>
+        <div class="social">
+          <img src="./img/snapchat.jpg" /> <img src="./img/facebook.jpg" />
+          <img src="./img/twitter.jpg" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

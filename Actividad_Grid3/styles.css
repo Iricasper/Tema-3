@@ -3,30 +3,18 @@
 }
 
 body {
-  margin: 1em auto;
-  width: 90%;
   font-family: Lobster;
   color: #666666;
 }
 
-img {
-  width: 70%;
-  height: 70%;
-  border-radius: 1em;
-  margin-top: 1em
-}
-
-#uno img, #dos img, #tres img, #cuatro img {
-  width: 90%;
-  height: 50%;
-}
-
 .container {
   display: grid;
-  width: 100%;
+  margin: 1em auto;
+  width: 90%;
   height: 100vh;
   gap: 1%;
-  grid-template-rows: 1fr 4fr 3fr 1fr;
+  /* grid-template-rows: 1fr 3fr 2fr 1fr; */
+  grid-template-rows: 10% 46% 26% 8%;
   grid-template-columns: 1fr 0.1fr 1.9fr 1.9fr 0.1fr 2fr;
   grid-template-areas: 
   "header header header header header header"
@@ -34,6 +22,21 @@ img {
   ". dos dos tres tres cuatro"
   "footer footer footer footer footer footer"
   ;
+}
+
+main img, article img  {
+  border-radius: 0.5em;
+  margin-top: 1em;
+}
+
+main img {
+  width: 70%;
+  height: 50%;
+}
+
+article img {
+  width: 90%;
+  height: 50%;
 }
 
 header {
@@ -47,7 +50,7 @@ nav {
 }
 
 main {
-    grid-area: main;
+  grid-area: main;
 }
 
 #uno {
@@ -64,32 +67,6 @@ main {
 
 #cuatro {
   grid-area: cuatro;
-}
-
-footer {
-  display: grid;
-  grid-area: footer;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "address copyright social"
-  ;
-  border-top: 1px solid black;
-  padding: 2% 2%;
-}
-
-address {
-  grid-area: address;
-}
-
-.copyright {
-  grid-area: copyright;
-  text-align: center;
-}
-
-.social {
-  grid-area: social;
-  text-align: end;
 }
 
 main, article {
@@ -114,11 +91,6 @@ nav div{
   padding-left: 1em
 }
 
-footer {
-  padding-top: 4em;
-  align-items: center;
-}
-
 address p {
   margin: 0;
 }
@@ -126,4 +98,31 @@ address p {
 .social img {
   height: 3em;
   width: auto;
+}
+
+footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "address copyright social"
+  ;
+  border-top: 1px solid black;
+  padding: 2% 2%;
+  align-items: center;
+}
+
+address {
+  grid-area: address;
+}
+
+.copyright {
+  grid-area: copyright;
+  text-align: center;
+}
+
+.social {
+  grid-area: social;
+  text-align: end;
 }

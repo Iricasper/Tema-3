@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oldlace;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav {
+  background-color: white;
+  margin: 0;
+  padding: 0 10em 1em;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2%;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 1%;
+  background-color: white;
+}
+
+.logo img {
+  width: 35%;
+}
+
+.imagen img {
+  width: 100%;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-rows: 1fr 4.5fr 1fr 2fr 5fr;
+  grid-template-columns: 20% 78%;
+  gap: 2%;
+  grid-template-areas: 
+  "idiomas contenedor-principal"
+  "noticias-container contenedor-principal"
+  "noticias-btn contenedor-principal"
+  "redes-sociales contenedor-principal"
+  ". contenedor-principal"
+  ;
+  width: 75%;
+  justify-self: center;
+  div {background-color: white;}
+}
+
+.idiomas {
+  grid-area: idiomas;
+}
+
+.idiomas ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.noticias-container {
+  grid-area: noticias-container;
+}
+
+.noticias-btn {
+  grid-area: noticias-btn
+}
+
+.redes-sociales {
+  grid-area: redes-sociales
+}
+
+.contenedor-principal {
+  grid-area: contenedor-principal
+}
