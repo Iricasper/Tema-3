@@ -37,57 +37,31 @@ a {
 
 .logo {
   text-align: center;
-  padding-top: 2.5%;
-  padding-bottom: 1%;
-  background-color: white;
 }
 
-.logo img {
-  width: 35%;
-}
+.logo img {width: 33%;}
 
-.imagen img {
-  width: 100%;
-}
+
 
 .contenedor {
   display: grid;
-  grid-template-rows: 1fr 4.5fr 1fr 2fr 5fr;
-  grid-template-columns: 20% 78%;
-  gap: 2%;
+  grid-template: 1fr 4fr 1fr 2fr 4fr / 1fr 3fr;
   grid-template-areas: 
-  "idiomas contenedor-principal"
-  "noticias-container contenedor-principal"
-  "noticias-btn contenedor-principal"
-  "redes-sociales contenedor-principal"
-  ". contenedor-principal"
-  ;
-  width: 75%;
-  justify-self: center;
-  div {background-color: white;}
+  "idiomas ppal"
+  "noticias ppal"
+  "btn ppal"
+  "rrss ppal"
+  ". ppal";
+  gap: 1%;
+  justify-items: center;
 }
 
-.idiomas {
-  grid-area: idiomas;
-}
+.idiomas {grid-area: idiomas}
 
-.idiomas ul {
-  display: flex;
-  flex-direction: row;
-}
+.noticias {grid-area: noticias}
 
-.noticias-container {
-  grid-area: noticias-container;
-}
+.noticias-btn {grid-area: btn}
 
-.noticias-btn {
-  grid-area: noticias-btn
-}
+.redes-sociales {grid-area: rrss}
 
-.redes-sociales {
-  grid-area: redes-sociales
-}
-
-.contenedor-principal {
-  grid-area: contenedor-principal
-}
+.contenedor-principal {grid-area: ppal}
